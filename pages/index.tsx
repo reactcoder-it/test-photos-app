@@ -37,6 +37,7 @@ const labelStyle: SxProps<Theme> = {
   borderStyle: 'solid',
   borderColor: COLOR_GREEN,
   minWidth: '60px',
+  width: { xs: 'calc(100% / 5 - 8px)', sm: 'calc(100% / 10 - 8px)', md: 'calc(100% / 16 - 8px)' },
   textAlign: 'center',
   borderRadius: '4px'
 }
@@ -108,7 +109,7 @@ const HomePage = ({ photos: allPhotos, albumIds }: Props) => {
                 {i % 2 !== 0 && (
                   <Box sx={{ height: '50px' }}></Box>
                 )}
-                <Box sx={{ display: 'flex' }}>
+                <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' } }}>
                   <Box component="img" src={p.thumbnailUrl} sx={{ borderRadius: '4px', objectFit: 'cover', objectPosition: 'center' }} />
                   <Box sx={{ padding: '20px' }}>
                     <Typography component="h4" sx={{ fontWeight: 700, color: '#555' }}>
