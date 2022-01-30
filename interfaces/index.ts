@@ -1,4 +1,7 @@
-export type User = {
+export interface Photo {
+  albumId: number
   id: number
-  name: string
+  title: string
+  url: string
+  thumbnailUrl: string
 }
